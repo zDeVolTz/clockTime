@@ -1,0 +1,15 @@
+.centered-div {
+    width: 50vw; /* Задайте нужную ширину */
+    height: 40vh; /* Задайте нужную высоту */
+    margin: 0 auto; /* Устанавливает автоматические отступы по горизонтали */
+    background-color: #f0f0f0; /* Задайте нужный цвет фона */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #clock {
+    /* Стили для элемента с id "myDiv" */
+    color: white;
+    /* Дополнительные стили */
+  }
