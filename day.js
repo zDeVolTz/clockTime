@@ -51,7 +51,7 @@ function displayDay(day) {
    clockColorElement.style.color = clockColor;
  }
 function displayColorValue(displayColor) {
-  var displayColorElement = document.querySelector('.centered-div');;
+  var displayColorElement = document.querySelector('.centered-div');
   displayColorElement.style.backgroundColor = displayColor;
 }
 
