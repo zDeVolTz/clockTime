@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="day.js"></script>
-    <script src="main.js"></script> 
-    
-    <!-- css -->
-    <!-- js --> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <!-- php -->
-    <div  class="centered-div"> <!-- // center -->
+<section class="bg-gray-50">
+  <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+    <div class="mx-auto max-w-lg text-center">
+      <h2 id="time" class="text-2xl font-bold text-gray-900 md:text-3xl">
         
-        <h1>Живые часы:</h1>
-        <div id="clock"></div>
-        
-        <h1 style="display: block;">Время суток</h1>
-        <div id="lol"></div>
-        <label for="myInput">Введите цвет:</label>
-        <input type="text" id="myInput" name="colors">
-        <button onclick="changeColor()"> меняем цвет </button>
-        
-        
-        <!-- <div>// time 
-            // d ночное время   блок становитьться  темным #374151
-            <span> // clock #65a30d ночное   дневное #020617
+      </h2>
 
-            </span>
+      <p class="hidden text-gray-500 sm:mt-4 sm:block">
+          time release !
+      </p>
+    </div>
+
+    <div class="mx-auto mt-8 max-w-xl">
+      <form id="colorsform" class="sm:flex sm:gap-4"  onsubmit="return false">
+        <div class="sm:flex-1">
+          <label  class="sr-only"></label>
+
+          <input
+            type="text"
+            id="getcolor"
+            placeholder="Get color send !"
+            class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
+          />
         </div>
-        -->
-        <!-- <form action="post" >
-            <input type="text" name="colors" >#f87171 
-        <button> кнопка </button>
-        </form>
-        -->
-    </div> <!-- // при обновлении страницы  должны сохраниться параметры --> 
-    <script src="changeColor.js"></script> 
+
+        <button
+          type="submit"
+          class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-rose-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
+        >
+          <span class="text-sm font-medium"> Change Color </span>
+
+          <svg
+            class="h-5 w-5 rtl:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 </body>
+<script src="app.js"></script>
 </html>
