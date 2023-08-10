@@ -11,18 +11,18 @@ const time = function (){
 setInterval(() => { time() }, 1000);
 // time end 
 // color  start
-const BoxTimeColor = (boxTime, color = '') => {
+const BoxTimeColor = (boxTime, color) => {
   console.log($.cookie('color'));
   let colorbox = () =>{
     let time  = new Date();
     if (time.getHours() > '19' || color == '' || ($.cookie('color'))) {
       if($.cookie('color')){
-        return $.cookie('color')
+        return $.cookie('color');
       }else{
-        return 'red'
+        return 'red';
       }
     }else{
-      $.cookie('color' , color)
+      $.cookie('color' , color);
       return color;
     }
   };
